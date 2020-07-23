@@ -12,6 +12,8 @@ package pub.ants.middle.question2;
  *   本算法只遍历两个链表，时间复杂度max(l1.length,l2.length)
  * 空间复杂度：
  *   本算法最多需要max(l1.length,l2.length)+1个元素，因为可能存在进位
+ * 思路：
+ *   利用带头节点链表，遍历传入的链表即可，最后输出注意要去掉头节点
  */
 public class Solution {
 

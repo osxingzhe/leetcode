@@ -15,6 +15,8 @@ import java.util.Map;
  *   本算法只遍历n个元素一遍【hashMap中get()的时间复杂度近似看作O(1)】,所以本算法的时间复杂度是O(N)
  * 空间复杂度：
  *   本算法所需要的额外的空间取决数组中元素大小(最大N个)，所以本算法的空间复杂度是O(N)
+ * 思路：
+ *   利用hashMap中k-v，key存储值，value存下标，get(key)可以认为O(1),可以降低时间复杂度
  */
 public class Solution {
 
