@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>pub.ants</groupId>
+  <artifactId>leetcode</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.3.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <mybatis.springboot.version>1.3.0</mybatis.springboot.version>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>${mybatis.springboot.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.cloud</groupId>
+      <artifactId>spring-cloud-starter-dada-consul</artifactId>
+      <version>1.5-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.data</groupId>
+      <artifactId>spring-cloud-starter-dada-data</artifactId>
+      <version>1.1-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-mustache</artifactId>
+      <version>2.1.2.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>2.6.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.base</groupId>
+      <artifactId>dada-base-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.base</groupId>
+      <artifactId>dada-base-db</artifactId>
+      <version>2.0-RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.base</groupId>
+      <artifactId>dada-base-config</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.rabbitmq</groupId>
+      <artifactId>dada-base-rabbitmq</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-all</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.base</groupId>
+      <artifactId>dada-base-web</artifactId>
+      <version>2.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- 熔断相关 -->
+    <dependency>
+      <groupId>com.dada.base</groupId>
+      <artifactId>spring-boot-starter-dada-hystrix-javanica</artifactId>
+      <version>2.0-RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.base</groupId>
+      <artifactId>dada-job-spring-boot-starter</artifactId>
+      <version>3.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- 用来做xml里的条件判断(if/else) -->
+    <dependency>
+      <groupId>org.codehaus.janino</groupId>
+      <artifactId>janino</artifactId>
+      <version>3.0.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.dada.infra</groupId>
+      <artifactId>dada-metrics-client</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.dada.base</groupId>
+          <artifactId>dada-base-redis</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- 短信平台 -->
+    <dependency>
+      <groupId>com.dada.message</groupId>
+      <artifactId>notify-client</artifactId>
+      <version>1.3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>1.0.0.GA</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>4.2.0.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.hsr</groupId>
+      <artifactId>geohash</artifactId>
+      <version>1.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>core</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>javase</artifactId>
+      <version>3.3.1</version>
+    </dependency>
+
+    <!-- Spring retry 依赖-->
+    <dependency>
+      <groupId>org.springframework.retry</groupId>
+      <artifactId>spring-retry</artifactId>
+      <version>1.1.4.RELEASE</version>
+    </dependency>
+
+    <!-- http mime -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpmime</artifactId>
+      <version>4.5.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.70</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.9.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.9.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.9.2</version>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.dada.base</groupId>
+        <artifactId>dada-infra-pom</artifactId>
+        <version>1.5.4-RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.mybatis.generator</groupId>
+        <artifactId>mybatis-generator-maven-plugin</artifactId>
+        <version>1.3.5</version>
+        <configuration>
+          <configurationFile>src/main/resources/mybatisGeneratorConfig.xml</configurationFile>
+          <verbose>true</verbose>
+          <overwrite>false</overwrite>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>dada-releases</id>
+      <name>Release Repository</name>
+      <url>http://nexus.corp.imdada.cn/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>dada-snapshots</id>
+      <name>Snapshot Repository</name>
+      <url>http://nexus.corp.imdada.cn/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <repositories>
+    <repository>
+      <id>release</id>
+      <name>dada-release</name>
+      <url>http://nexus.corp.imdada.cn/content/repositories/releases/</url>
+    </repository>
+    <repository>
+      <id>snapshots</id>
+      <name>dada-snapshots</name>
+      <url>http://nexus.corp.imdada.cn/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>central</id>
+      <name>dada-central</name>
+      <url>http://nexus.corp.imdada.cn/content/repositories/central/</url>
+    </repository>
+  </repositories>
+
+</project>
