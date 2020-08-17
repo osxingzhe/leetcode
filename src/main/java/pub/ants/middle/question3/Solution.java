@@ -27,7 +27,7 @@ public class Solution {
 
         public int lengthOfLongestSubstring(String s) {
             // 用来存储最长不重复子串
-            Set<Character> set = new HashSet<>();
+            Set<Character> set = new HashSet<Character>();
             // 右指针为-1(未开始)，最大长度0，字符串长度length
             int right=-1,maxLength=0,length = s.length();
             for(int i=0;i<length;i++){
